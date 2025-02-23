@@ -119,7 +119,6 @@ const deleteUser = async(req,res) =>{
     console.log(username);
     
     try {
-        const dbUser = await User.findOne({username});
         await User.deleteOne({username});
         return res.status(200).json({msg:'Usuario eliminado exitosamente'});
     } catch (error) {

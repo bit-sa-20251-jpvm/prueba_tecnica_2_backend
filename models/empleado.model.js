@@ -1,6 +1,6 @@
-const {Schema, model} = require('mongoose');
+const mongoose = require('mongoose');
 
-const empleadoSchema = Schema({
+const empleadoSchema = mongoose.Schema({
     codigo:{
         type: Number,
         required: true,
@@ -19,8 +19,9 @@ const empleadoSchema = Schema({
         required: true
     },
     codigo_departamento:{
-        type: mongoose.Types.ObjectId, ref: "Departamentos"
+        type: mongoose.Types.ObjectId, ref: "Departamentos",
+        required: true
     }
 })
 
-module.exports = model('Empleados', empleadoSchema);
+module.exports = mongoose.model('Empleados', empleadoSchema);
