@@ -29,6 +29,7 @@ const readAllDepartamentos = async (req,res) => {
 
 const updateDepartamento = async (req, res) => {
     const { codigo_departamento, nombre} = req.body;
+console.log(nombre);
 
     try {
         await Departamento.updateOne({ codigo_departamento }, {
