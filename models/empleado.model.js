@@ -18,7 +18,7 @@ const empleadoSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    codigo_departamento:{
+    departamento:{
         type: mongoose.Types.ObjectId, ref: "Departamentos",
         required: true
     }
